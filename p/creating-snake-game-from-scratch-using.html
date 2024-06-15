@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChatGPT-4, GPT4. ChatGPT, snake game, AI, gamedev ">
+    <meta name="keywords" content="Music with ChatGPT">
+    <meta name="author" content="AI news">
+    <title>Creating a "Snake" Game from Scratch Using ChatGPT-4
+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">AI programmer</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <article>
+                    <h1>Creating a "Snake" Game from Scratch Using ChatGPT-4
+</h1>
+                    
+					<p> I will walk you through the process of creating a "Snake" game from scratch using <a href="https://gptchatly.com/ChatGPT4-no-login.html">ChatGPT-4</a>, a cutting-edge AI language model developed by <a href="openai.com">OpenAI</a>. I will provide valuable insights and commentary throughout the development process, and by the end of this article, you will have access to the complete game code for your reference. Don't miss out on this opportunity to learn from the best and develop your own version of this classic game!</p>
+					
+					<a href="https://youtu.be/8SGlc3XsNF0?si=NAlp41QPKj-nWCaN">Video of Snake game made by ChatGPT-4</a>
+					
+                  <p>I found myself with a burning curiosity: could the GPT-4 model autonomously craft a game, completely from scratch, without any coding assistance whatsoever? My only role was to provide the game's performance feedback, all while operating PyCharm from JetBrains to execute the scripts. </p>
+
+<p>And so, the game was set to appear in the "Pygame" window. With bated breath, I watched as GPT-4 began to churn out lines of code. The first version was completed in what seemed like a matter of moments. Alas, it was all for naught; the "Pygame" window closed immediately, accompanied by a discouraging "Process finished with exit code 0" message. </p>
+
+ <p>I reported this to ChatGPT. Unsurprisingly, GPT-4 offered a congratulatory response, mistakingly believing that the game had indeed run successfully. However, I had to clarify that the "Pygame" window had closed immediately, leaving the model with yet another challenge to overcome.</p>
+					<center>
+					  <img src="creenshot_ChatGPT-4_generated_Snake_game_from_scratch.png" width="444" height="640" alt="screenshot of ChatGPT-4-generated Snake game from scratch"/>
+					</center>
+				
+				
+<p>The GPT-4 attempted to produce another version of the game, but it failed to run. After being suggested to update the 'game_over' function, I did so, and the Pygame window remained, displaying only the "Game Over" message without any actual gameplay.
+
+
+
+<p>Below is the code for the updated snake game, written entirely by <a href="https://gptchatly.com/ChatGPT4-no-login.html">ChatGPT-4</a>:</p>
+					
+					<code>import pygame
+import sys
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Game window settings
+WIDTH, HEIGHT = 800, 600
+BACKGROUND_COLOR = (0, 0, 0)
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+
+# Snake settings
+SNAKE_COLOR = (0, 255, 0)
+SNAKE_SIZE = 20
+snake_pos = [[100, 100], [120, 100], [140, 100]]
+snake_speed = 20
+direction = "RIGHT"
+
+# Food settings
+FOOD_COLOR = (255, 0, 0)
+FOOD_SIZE = 20
+food_pos = [random.randrange(1, (WIDTH//20)) * 20, random.randrange(1, (HEIGHT//20)) * 20]
+
+# Game settings
+CLOCK = pygame.time.Clock()
+SPEED = 10
+
+def draw_snake(snake_pos):
+    for pos in snake_pos:
+        pygame.draw.rect(SCREEN, SNAKE_COLOR, pygame.Rect(pos[0], pos[1], SNAKE_SIZE, SNAKE_SIZE))
+
+def draw_food(food_pos):
+    pygame.draw.rect(SCREEN, FOOD_COLOR, pygame.Rect(food_pos[0], food_pos[1], FOOD_SIZE, FOOD_SIZE))
+
+def check_food_collision(snake_pos, food_pos):
+    if snake_pos[0] == food_pos:
+        food_pos[0] = random.randrange(1, (WIDTH//20)) * 20
+        food_pos[1] = random.randrange(1, (HEIGHT//20)) * 20
+        snake_pos.append([0, 0])
+        return True
+    return False
+
+def game_over():
+    font = pygame.font.Font(None, 48)
+    text = font.render("Game Over", True, (255, 255, 255))
+    text_rect = text.get_rect()
+    text_rect.center = (WIDTH // 2, HEIGHT // 2)
+    SCREEN.blit(text, text_rect)
+    pygame.display.flip()
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_over()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP and direction != "DOWN":
+                direction = "UP"
+            if event.key == pygame.K_DOWN and direction != "UP":
+                direction = "DOWN"
+            if event.key == pygame.K_LEFT and direction != "RIGHT":
+                direction = "LEFT"
+            if event.key == pygame.K_RIGHT and direction != "LEFT":
+                direction = "RIGHT"
+
+    # Update snake's position
+    for i in range(len(snake_pos) - 1, 0, -1):
+        snake_pos[i] = list(snake_pos[i-1])
+
+    if direction == "UP":
+        snake_pos[0][1] -= snake_speed
+    if direction == "DOWN":
+        snake_pos[0][1] += snake_speed
+    if direction == "LEFT":
+        snake_pos[0][0] -= snake_speed
+    if direction == "RIGHT":
+        snake_pos[0][0] += snake_speed
+
+    # Check for collisions
+    if snake_pos[0] in snake_pos[1:] or snake_pos[0][0] < 0 or snake_pos[0][0] >= WIDTH or snake_pos[0][1] < 0 or snake_pos[0][1] >= HEIGHT:
+        pygame.time.delay(500)  # Add a delay before game over
+        game_over()
+
+    check_food_collision(snake_pos, food_pos)
+
+    # Draw game objects
+    SCREEN.fill(BACKGROUND_COLOR)
+    draw_snake(snake_pos)
+    draw_food(food_pos)
+
+    pygame.display.flip()
+    CLOCK.tick(SPEED)</code>
+					
+
+
+
+
+
+ <p>Earlier posts:</p>
+<p><a href="https://www.ukhdan.org.uk/p/foreign-language-learning-contemporary.html">Foreign Language Learning Contemporary Instruments and the Promises of ChatGPT</a> </p>
+
+				<p><a href="https://www.ukhdan.org.uk/p/learn-finnish-language-with-chatgpt.html">Learn Finnish Language with ChatGPT  (LearnFinnish.AI)</a></a>
+
+<p><a href="https://www.ukhdan.org.uk/p/free-no-code-no-registration-web-app.html">Free no-code no registration web app for combining scatterplots with barplots</a></p>
+
+
+
+
+                </article>
+                
+               
+            </div>
+           
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI news. All rights reserved.</p>
+            <ul class="footer-links">
+              
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+	
+	</body>
+
+</html>
