@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy</title>
+    <meta name="description" content="In-depth comparison of Google’s Gemini 2.5 Pro Preview (05-06) versus Anthropic’s Claude 3.7 Sonnet, covering benchmarks, specs, user feedback, pricing, and use cases." />
+    <meta name="keywords" content="Gemini 2.5 Pro Preview, Claude 3.7 Sonnet, large language models, AI coding, benchmarks, WebDev Arena, LMArena, multimodal AI, token pricing, AI development" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">UK-HDAN</a>
+                <ul class="nav-links">
+                    <!-- Add other primary navigation links here if needed -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Content Wrapper for Main Content and Sidebar -->
+        <div class="content-wrapper">
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <article>
+                    <h1>Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy</h1>
+                    <center><div>
+                        <a href="../../media/Gemini-2.5-Pro-Preview-05-06_vs_Claude-3.7-Sonnet_benchmarks_comaprison_table.webp">
+                        <img src="../../media/Gemini-2.5-Pro-Preview-05-06_vs_Claude-3.7-Sonnet_benchmarks_comaprison_table.webp" alt="Gemini 2.5 Pro Preview-05-06 vs Claude 3.7 Sonnet benchmarks comaprison table; WebDev Arena Leaderboard, LMArena Chatbot Arena, AIME 2025, GPQA Diamond, SWE-bench Verified, VideoMME, MMMU, MRCR, Global MMLU (Lite), Humanity’s Last Exam" />
+                        </a>
+                    </div></center>
+                    <h2>Introduction</h2>
+                    <p>The world of artificial intelligence has never moved faster. In 2025, large language models have leapt from laboratory curiosities to indispensable tools, powering everything from code generation to creative storytelling. In this high-stakes arena, two challengers stand out: Google’s freshly minted Gemini 2.5 Pro Preview (05-06) and Anthropic’s Claude 3.7 Sonnet. Both promise leaps in reasoning ability, multimodal understanding, and coding prowess—but which truly sets the new standard?</p>
+                    <p>This article dives deep into the heart of the competition. We’ll chart their performance across human-judged leaderboards, dissect their technical underpinnings—context windows, multimodal inputs, knowledge cutoffs, pricing—and surface real-world accounts from developers grappling with each model’s quirks. By the end, you’ll have a clear map for when to pick Gemini’s raw power and when to lean on Claude’s thoughtful precision.</p>
+
+                    <h2>Background and Release Timelines</h2>
+                    <p>In the days leading up to its flagship developer conference, Google let rip a surprise: on May 6, 2025, Gemini 2.5 Pro Preview (05-06) went live. Branded the “I/O edition,” this build arrived early after whispers of exceptionally strong coding feedback, giving developers a head start on integrating its expanded capabilities. Accessible via the Gemini API, Google’s Vertex AI suite, AI Studio, and the familiar Gemini chatbot app on web and mobile, the preview preserves the same token-pricing tiers as its immediate predecessor—though with substantially beefed-up performance.</p>
+                    <p>Anthropic, not to be outdone, quietly rolled out Claude 3.7 Sonnet in the opening months of 2025. Its headline feature, “Thinking Mode,” invites users to peer into the model’s step-by-step reasoning process—a page torn from the recent trend of transparent AI pipelines. Anthropic kept its established pricing intact: $3 per million input tokens and $15 per million output tokens, billing even the internal “thinking” tokens at those rates. Claude 3.7 Sonnet landed across Claude.ai, via Anthropic’s own API, and on major cloud platforms like Amazon Bedrock and Google Cloud’s Vertex AI, ensuring broad availability from day one.</p>
+
+                    <h2>Core Technical Specifications</h2>
+                    <h3>Context Window</h3>
+                    <p>At the heart of any language model lies its capacity to hold context—and here, Gemini strides ahead with a staggering one-million-token window, expandable to two million for those truly epic inputs. In practical terms, that means entire codebases, lengthy legal briefs, or multi-chapter novels can be digested in a single prompt. Claude, by contrast, caps out at 200,000 tokens—ample for most conversational or document-summarization tasks, but a clear constraint when your project spans tens of thousands of lines of code.</p>
+
+                    <h3>Multimodal Capabilities</h3>
+                    <p>Beyond sheer text volume, multimodality has become table stakes. Gemini’s Preview doesn’t just read: it sees, hears, and watches. Text, images, audio clips, even video snippets all feed into its neural engine, enabling use cases from automated video summarization to voice-guided code review. Claude 3.7 Sonnet joins the image bandwagon but stops there—no audio transcription, no frame-by-frame video analysis. For any project that marries code with UX mockups or integrates spoken user feedback, Gemini holds the advantage.</p>
+
+                    <h3>Knowledge Cutoff & Model Architectures</h3>
+                    <p>Under the hood, both models share transformer-based lineages—but their knowledge cutoffs hint at whose training set went deeper into recent events. Gemini’s data pipeline extends through January 2025, capturing developments up to the new year. Claude’s last update halts at October 2024, meaning any breakthroughs or news after that point won’t register. When your query touches on the first months of 2025—say, a freshly published library or API change—Gemini has the edge.</p>
+
+                    <h3>Pricing Structures</h3>
+                    <p>Of course, power must be weighed against cost. Gemini’s I/O Preview retains Google’s familiar token pricing: $2.50 per million input tokens (dropping to $1.25 under 200K tokens) and $15 per million output tokens (with a $10/M tier for shorter responses). A free tier eases experimentation. Claude stands firm at $3 per million inputs and $15 per million outputs, billing thinking tokens the same as user tokens. In scenarios where you’re feeding in massive prompts without heavy generated output—such as batch code analysis—Gemini’s discounted input rate can translate to meaningful savings.</p>
+
+                    <h2>Performance Benchmarks</h2>
+                    <p>No discussion of these two juggernauts is complete without a look at leaderboard glory. On the WebDev Arena, where human evaluators pit AI-generated web applications head-to-head, Gemini exploded ahead, netting a +147 Elo-point surge over its own predecessor—enough to knock Claude into second place. That margin isn’t just statistical noise; it reflects a consistent preference for Gemini’s UI scaffolding, CSS finesse, and end-to-end deployment scripts.</p>
+                    <p>Broader conversational prowess comes into focus on LMArena’s Chatbot Arena, where blind comparisons yield an “Arena Score.” Here again, Gemini rings up a 1448, comfortably above Claude’s 1292, cementing its reputation as the go-to for developers craving rapid, polished dialogue in chat-based tools.</p>
+
+                    <p>But coding and conversation are only part of the story. Both models flex on academic benchmarks:</p>
+                    <ul>
+                        <li><strong>Mathematics (AIME 2025)</strong>: Gemini nails 83.0% of pass-@1 problems, leaving Claude’s 49.5% in the dust.</li>
+                        <li><strong>Scientific Reasoning (GPQA Diamond)</strong>: Gemini’s 83.0% edges close to Claude’s 84.8% (in extended-thinking mode), showcasing strong STEM chops on both sides.</li>
+                        <li><strong>Agentic Coding (SWE-bench Verified)</strong>: Here, Claude strikes back with 70.3% to Gemini’s 63.2%, highlighting Anthropic’s strength in step-by-step algorithmic tasks.</li>
+                        <li><strong>Video Understanding (VideoMME)</strong>: At 84.8%, Gemini stands unchallenged—Claude doesn’t even enter this arena.</li>
+                        <li><strong>Multimodal Reasoning (MMMU)</strong>: Gemini’s 79.6% surpasses Claude’s 75.0%, another testament to broad media handling.</li>
+                        <li><strong>Long Context Retention (MRCR 128 K / 1 M)</strong>: Gemini scores 93.0% / 82.9%, demonstrating robust memory far beyond Claude’s limits.</li>
+                        <li><strong>Multilingual Proficiency (Global MMLU Lite)</strong>: 88.6% for Gemini; Claude’s figure isn’t publicly benchmarked here.</li>
+                        <li><strong>General Knowledge (Humanity’s Last Exam, no tools)</strong>: 17.8% versus Claude’s 8.9%, a striking gap in world-fact recall.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Benchmark</th>
+                            <th>Gemini 2.5 Pro Preview (05-06)</th>
+                            <th>Claude 3.7 Sonnet (Extended)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>WebDev Arena Elo</td>
+                            <td>#1 (+147 over prior)</td>
+                            <td>#2</td>
+                        </tr>
+                        <tr>
+                            <td>LMArena Arena Score</td>
+                            <td>1448</td>
+                            <td>1292</td>
+                        </tr>
+                        <tr>
+                            <td>AIME 2025</td>
+                            <td>83.0%</td>
+                            <td>49.5%</td>
+                        </tr>
+                        <tr>
+                            <td>GPQA Diamond</td>
+                            <td>83.0%</td>
+                            <td>84.8%</td>
+                        </tr>
+                        <tr>
+                            <td>SWE-bench Verified</td>
+                            <td>63.2%</td>
+                            <td>70.3%</td>
+                        </tr>
+                        <tr>
+                            <td>VideoMME</td>
+                            <td>84.8%</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <td>MMMU</td>
+                            <td>79.6%</td>
+                            <td>75.0%</td>
+                        </tr>
+                        <tr>
+                            <td>MRCR (128 K / 1 M)</td>
+                            <td>93.0% / 82.9%</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <td>Global MMLU (Lite)</td>
+                            <td>88.6%</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <td>Humanity’s Last Exam (no tools)</td>
+                            <td>17.8%</td>
+                            <td>8.9%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Independent Reviews & Developer Feedback</h2>
+                    <p>Early adopters have been quick to sing Gemini 2.5 Pro’s praises. Developers rave about its blistering speed—tasks that once dragged on now flash by as Gemini churns through large-scale refactoring like a master sculptor reshaping marble. Stories abound of the model cracking the Cleo Integral, a problem that stumped even seasoned coders, and then immediately scaffolding full-fledged UI projects with minimal prompting. In hackathons and Slack threads alike, users marvel at Gemini’s uncanny ability to autogenerate web‐app prototypes: HTML, CSS, JavaScript—and even serverless hooks—appear in a single shot, ready for refinement.</p>
+                    <p>Yet the honeymoon isn’t without hiccups. Some engineers grumble that those impressive feats come at the cost of longer runtimes—minute‐long waits peppered with status spinners. Others note a certain verbosity: code comments that read like turgid essays, and function signatures festooned with layers of overengineered abstraction. A few lament that, compared to its predecessor, Gemini occasionally drifts from strict prompt instructions—tweaks that feel nicer for conversational tasks but clumsy when you just want a bare‐bones utility function. Prompt adherence regressions, they warn, can cascade into hours spent trimming away politely worded but unnecessary scaffolding.</p>
+                    <p>Claude 3.7 Sonnet, for its part, has earned a reputation as the patient mentor. Its code outputs are lean and precise, each line purposeful; reviewers highlight Claude’s step‐by‐step explanations as a godsend when debugging gnarly edge cases. It doesn’t rush—you’ll wait a beat longer for that clean, well‐commented function, but you’ll get exactly what you asked for, and probably a brief rationale for each design choice. For newcomers or teams using AI as a teaching tool, this “walk‐through” style has proven invaluable, forging trust and understanding where black‐box models often falter.</p>
+                    <p>Still, Claude’s virtues come with trade‐offs. Its 200,000‐token context window forces developers to juggle snippets instead of entire repositories, and complex codebases can quickly bump into that ceiling. Generation speed lags behind Gemini’s breakneck pace, which can frustrate time‐pressed sprints. And at $3 per million tokens in, with no free tier beyond a basic trial, several teams cite sticker‐shock when bills arrive; budget‐minded shops sometimes switch off Claude mid‐project to rein in costs.</p>
+
+                    <h2>Deep-Dive Use Cases</h2>
+                    <h3>Web Application Development</h3>
+                    <p>When spinning up interactive dashboards or landing pages, Gemini consistently steals the show. Its massive context length lets it ingest entire React codebases and churn out feature branches with flawless CSS tweaks and component refactors. Designers report feeding it high-fidelity mockups—screenshots pasted right into the prompt—and watching as Gemini translates visuals into pixel-perfect layouts. For rapid prototyping, nothing else comes close.</p>
+
+                    <h3>Complex Algorithm Implementation</h3>
+                    <p>Here, Claude’s deliberate reasoning shines. Toss it a description of a graph‐coloring problem or ask for an optimized Dijkstra implementation, and you’ll get meticulously annotated pseudocode first, then clean, compiles‐on‐the‐first‐run code. Its extended thinking mode logs each inference step, making it easy to spot and correct logical missteps. Teams tackling scientific simulations or bespoke data structures often fall back to Claude when precision and traceability matter.</p>
+
+                    <h3>Multimodal Projects</h3>
+                    <p>Gemini truly stretches its legs in the multimedia arena. Developers crafting video‐based tutorials feed in raw clips—fragments of UI walkthroughs, camera footage, or screen recordings—and receive cohesive scripts, chapter markers, and even automated summary transcripts. Audio-driven tasks, like generating code from spoken requirements, flow naturally. Claude, limited to text and images, simply can’t compete in these rich, cross-modal workflows.</p>
+
+                    <h3>Educational & Onboarding Scenarios</h3>
+                    <p>In classrooms and code‐review sessions, Claude’s mentor-like persona wins hearts. Instructors use its extended thinking trail as teaching material: students follow the model’s reasoning, learn how it spots edge cases, and observe best practices in real time. New hires appreciate Claude’s knack for breaking down monolithic legacy code into comprehensible chunks. Gemini can handle the content size, but its terser explanations sometimes skip the pedagogical flourishes that make Claude so effective for learning.</p>
+
+                    <h2>Cost-Benefit Analysis</h2>
+                    <h3>Token Pricing Breakdown</h3>
+                    <p>Gemini’s Preview retains Google’s flexible, tiered structure: input tokens run $2.50 per million (dropping to $1.25 under 200K), while outputs cost $15 per million—with a $10/M discount for shorter replies—and a generous free tier for initial experiments. Claude, by contrast, charges a flat $3 per million input tokens and $15 per million outputs, with no sustained free allowance beyond a limited trial. In workflows dominated by hefty prompts—batch code review, long-document summarization or multimodal ingestion—Gemini’s cut-rate input band can slice tooling budgets by as much as 50%.</p>
+
+                    <h3>Total Cost of Ownership</h3>
+                    <p>Yet price per token only tells half the story. Several teams have surfaced surprise bills: one AI consultancy reported a single afternoon of Gemini prototyping adding up to a $500 invoice. Even with discounted input rates, runaway loops (e.g., repeatedly regenerated UI scaffolds) can balloon costs if usage isn’t gated. Claude customers, while paying slightly more per input token, cite steadier, more predictable billing—beneficial for enterprises with firm budget caps.</p>
+
+                    <h3>Scalability & Budget Planning</h3>
+                    <p>For startups or research labs experimenting at scale, Gemini’s free tier and volume discounts encourage broad adoption—and ‘sandbox sprawl’ that can be tamed only with vigilant monitoring. Claude’s simpler fee structure, though stiffer per token, eases financial forecasting. Teams planning monthly token consumption into the hundreds of millions should weigh Gemini’s aggressive scale discounts against Claude’s billing transparency, then codify clear usage thresholds to avoid fiscal whiplash.</p>
+
+                    <h2>Strategic Positioning & Future Outlook</h2>
+                    <p><strong>Ecosystem Roles</strong><br>
+                        Google positions Gemini as the Swiss-Army knife of AI: raw performance, multimodal breadth, seamless Cloud integration. Anthropic casts Claude as the thoughtful tutor: rigorous reasoning, transparent “Thinking Mode,” and a focus on safety guardrails. Both vendors see coding as the killer app—with Google betting on end-to-end developer workflows and Anthropic doubling down on trust and explainability in regulated industries.</p>
+
+                    <p><strong>Roadmaps on the Horizon</strong><br>
+                        Inside sources suggest Gemini’s context window may swell further—rumors speak of a 2-million-token option by year-end—alongside deeper Vertex AI hooks for real-time data and tool use. Meanwhile, OpenAI’s upcoming ChatGPT reasoning upgrade promises to blur the lines between Claude’s step-by-step mode and more mainstream chat interfaces. Expect Google to respond by enhancing Gemini’s ‘thinking built-in’ explanations, and Anthropic to tease a multimodal Claude sonnet capable of light audio or rudimentary video understanding.</p>
+
+                    <p><strong>Emerging Competitive Forces</strong><br>
+                        Beyond the Gemini-Claude duel, a new generation of challengers—Musk’s Grok 3, DeepSeek-R1, Qwen, and extensions of open-source LLMs—are staking claims at the nexus of cost, performance, and openness. As giants rush to roll out “reasoning everywhere,” price wars and feature parity fights will reshape these early leadership positions. For now, Gemini and Claude hold distinct peaks—but the ascent of nimble newcomers could redraw the summit map in months.</p>
+
+                    <h2>Conclusions & Recommendations</h2>
+                    <p><strong>Task-Driven Model Selection</strong><br>
+                        <em>High-Velocity Web Development:</em> Gemini’s massive context window and UI auto-generation make it the clear first choice.<br>
+                        <em>Deep Algorithmic Logic & Debugging:</em> Claude’s mentor-style, stepwise reasoning gives it the edge for critical, precise implementations.<br>
+                        <em>Multimodal Pipelines (Video/Audio):</em> Gemini alone can handle end-to-end media ingestion and annotation.<br>
+                        <em>Onboarding & Educational Use:</em> Claude’s transparent thinking trails are unmatched for pedagogy and code reviews.</p>
+
+                    <p><strong>Best Practices & Tool Synergies</strong><br>
+                        Coupling Gemini with context7 MCP (or similar documentation-indexing tools) tames hallucinations and keeps expensive prompts crisp. For teams leaning on Claude, integrating automatic prompt-chunking libraries smooths context-window limits. And in hybrid workflows—prototype in Gemini, refine in Claude—developers can exploit each model’s strengths while containing costs.</p>
+
+                    <p><strong>Final Verdict</strong><br>
+                        There is no universal champion. For projects that prize raw throughput, long-form context, and rich media capabilities, Gemini 2.5 Pro Preview (05-06) raises the bar. For workflows demanding iron-clad precision, granular explanations, and billing predictability, Claude 3.7 Sonnet remains the steadfast companion. Savvy teams will map their use cases to these sweet spots—then stay nimble, because in 2025’s AI arms race, today’s victor can become tomorrow’s underdog overnight.</p>
+
+                    <h2>Appendice</h2>
+                    <p><strong>Appendix A: Detailed Benchmark Comparison</strong><br>
+                        (See table above in “Performance Benchmarks” for side-by-side scores)</p>
+                    <p><strong>Appendix B: Pricing Structures at a Glance</strong><br>
+                        <em>Gemini 2.5 Pro Preview:</em><br>
+                        • Input: $2.50/M ($1.25/M ≤200K) | Output: $15.00/M ($10.00/M ≤200K) | Free tier available<br>
+                        <em>Claude 3.7 Sonnet:</em><br>
+                        • Input: $3.00/M | Output: $15.00/M | Trial limited free usage</p>
+                    
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts-list">
+                        <li><a href="openai-gpt-4-1-vs-anthropic-claude-3-7-sonnet.html" title="OpenAI GPT-4.1 vs Anthropic Claude 3.7 Sonnet: A Tech Journalist’s Deep Dive">OpenAI GPT-4.1 vs Anthropic Claude 3.7...</a></li>
+                        <li><a href="../04/guide-to-open-source-blog-engines.html" title="Blog Wars 2025: Your Ultimate Open-Source, Self-Hosted Blogging Platform Showdown">Guide to Open Source Blog Engines...</a></li>
+                        <li><a href="../../2024/06/apple-event-wwdc-2024-summary.html" title="Apple Event 2024: Revolutionizing Technology with Apple Intelligence">Apple Event 2024: Apple Intelligence...</a></li>
+                        <li><a href="../../p/composing-music-with-chatgpt.html" title="Composing Music with ChatGPT: An Inspiration or a Threat to the Musicians?">Composing Music with ChatGPT...</a></li>
+                        <li><a href="../../p/creating-snake-game-from-scratch-using.html" title="Creating a Snake Game from Scratch Using ChatGPT-4">Creating a Snake Game with ChatGPT-4</a></li>
+                        <li><a href="../../p/foreign-language-learning-contemporary.html" title="Foreign Language Learning: Contemporary Instruments and the Promises of ChatGPT">Foreign Language Learning & ChatGPT...</a></li>
+                        <li><a href="../../p/health-data-analytics-network.html" title="UK HEALTH DATA ANALYTICS NETWORK">UK Health Data Analytics Network</a></li>
+                        <li><a href="../../p/the-future-of-health-data-analytics-in.html" title="The Future of Health Data Analytics in the UK: Prospects and Roadmap">Future of Health Data Analytics UK...</a></li>
+                        <li><a href="../../p/the-state-of-health-data-science-in-uk.html" title="The State of Health Data Science in the UK: Before and After COVID">State of Health Data Science UK...</a></li>
+                        <li><a href="../../p/what-data-scientists-do.html" title="What data scientists do">What Data Scientists Do</a></li>
+                        <li><a href="../../p/free-no-code-no-registration-web-app.html" title="Free no-code no registration web app for combining scatterplots with barplots">Free Web App: Scatter/Bar Plots...</a></li>
+                        <li><a href="../../2024/06/5-best-ai-characters-websites.html" title="Top five AI-characters Websites">5 Best AI Characters Websites</a></li>
+                        <li><a href="../../2024/06/ai-therapy-perks-and-pitfalls-of.html" title="AI therapy: The Perks and Pitfalls">AI Therapy: Perks and Pitfalls</a></li>
+                        <li><a href="../../2024/05/meet-victoria-ukraines-groundbreaking.html" title="Meet Victoria: Ukraine's Groundbreaking AI Government Spokesperson">Meet Victoria: Ukraine's AI Spokesperson</a></li>
+                        <li><a href="../../2024/05/intel-boosts-performance-with-500.html" title="Intel Boosts Performance with 500 Optimized AI Models for Core Ultra Processors">Intel Boosts Performance with 500 AI Models...</a></li>
+                        <li><a href="../../2024/04/meta-llama-3-70b-best-open-source-llm.html" title="Meta Llama-3-70b">Meta Llama-3-70b: Best Open Source LLM</a></li>
+                        <li><a href="../../2024/04/music-industry-fights-back-rise-of-ai.html" title="Music Industry Fights Back: The Rise of AI">Music Industry Fights Back vs AI</a></li>
+                        <li><a href="../../2024/03/gpt-2-from-too-scary-to-excel-sheet.html" title="GPT-2: From Too Scary to Excel Sheet">GPT-2: From Too Scary to Excel Sheet</a></li>
+                        <li><a href="../../2024/03/mistral-ai-french-startup-committed-to.html" title="Mistral AI: A French Startup Committed to Open Source Principles">Mistral AI: French Startup & Open Source</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> </p>
+            <ul class="footer-links">
+                <!-- Add footer links like Privacy Policy, Terms of Service if available -->
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to display the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
