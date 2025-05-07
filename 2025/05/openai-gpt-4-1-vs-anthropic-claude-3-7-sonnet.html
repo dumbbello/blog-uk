@@ -1,94 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camparing OpenAI GPT-4.1 with Anthropic Claude 3.7 Sonnet</title>
-  <meta name="keywords" content="OpenAI, GPT-4.1, Anthropic, Claude 3.7 Sonnet, AI, large language models, LLM, comparison, coding benchmarks, reasoning capabilities"/>
-  <meta name="description" content="A detailed comparison of OpenAI GPT-4.1 and Anthropic Claude 3.7 Sonnet, their features, performance, and optimal use cases for developers and researchers."/>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; background: #f9f9f9; color: #333; }
-    h1, h2, h3 { color: #222; }
-    h1 { border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
-    p { margin: 1em 0; }
-    section { margin-bottom: 2rem; }
-    code { background: #eee; padding: 0.2em 0.4em; border-radius: 3px; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camparing OpenAI GPT-4.1 with Anthropic Claude 3.7 Sonnet</title>
+    <meta name="keywords" content="OpenAI, GPT-4.1, Anthropic, Claude 3.7 Sonnet, AI, large language models, LLM, comparison, coding benchmarks, reasoning capabilities" />
+    <meta name="description" content="A detailed comparison of OpenAI GPT-4.1 and Anthropic Claude 3.7 Sonnet, their features, performance, and optimal use cases for developers and researchers." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <h1>OpenAI GPT-4.1 vs Anthropic Claude 3.7 Sonnet</h1>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">UK-HDAN</a>
+                <ul class="nav-links">
+                    <!-- Add other primary navigation links here if needed -->
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <section id="introduction">
-    <h2>1. Introduction</h2>
-    <p>
-      In the whirlwind of AI innovation, OpenAI’s GPT-4.1 and Anthropic’s Claude 3.7 Sonnet stand as titans locked in a dance of capabilities. This narrative peels back the layers of both models, spotlighting their breakthroughs, quirks, and trade-offs. Our aim: to equip researchers, engineers, and curious minds with a lucid, high-voltage comparison that crackles with both depth and flair.
-    </p>
-  </section>
+    <main class="main-container">
+        <!-- Content Wrapper for Main Content and Sidebar -->
+        <div class="content-wrapper">
 
-  <section id="gpt41-analysis">
-    <h2>2. OpenAI’s GPT-4.1: Unpacking the Powerhouse</h2>
-    <h3>2.1 Key Features &amp; Developer-Focused Gains</h3>
-    <p>
-      Launched on April 14, 2025, the GPT-4.1 family (standard, mini, nano) ratchets up real-world utility. Code diffs now land with sniper precision—scores on Aider’s polyglot benchmark more than double GPT-4o’s, slicing latency and cost by offloading unchanged lines. Frontend chores? Human graders pick GPT-4.1 outputs over GPT-4o’s 80% of the time, praising cleaner structure and stylish flair.
-    </p>
-    <p>
-      On the SWE-bench Verified, GPT-4.1 jumps to 54.6% from GPT-4o’s 33.2%, translating to 60% better internal dev-benchmarks and 30% leaner tool orchestration, per alpha testers. Instruction fidelity climbs too: 38.3% on ScaleAI’s MultiChallenge, up 10.5 points, with robust handling of negative, ordered, and content-rich prompts hailed by legal tech pioneers.
-    </p>
-    <h3>2.2 Specs &amp; Pricing</h3>
-    <p>
-      Context windows explode to 1,047,576 tokens—far eclipsing past caps—fueling nuanced multi-hop reasoning in legal and financial domains. Output maxes at 32,768 tokens. Pricing tiers cascade from flagship ($2 input, $8 output per million) to nano’s bargain bin ($0.10/$0.40), democratizing access for budget-savvy devs.
-    </p>
-  </section>
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <article>
+                    <h1>OpenAI GPT-4.1 vs Anthropic Claude 3.7 Sonnet</h1>
 
-  <section id="claude-analysis">
-    <h2>3. Anthropic’s Claude 3.7 Sonnet: The Hybrid Thinker</h2>
-    <h3>3.1 Hybrid Reasoning &amp; Multimodal Flair</h3>
-    <p>
-      Debuted February 2025 with a “hybrid reasoning” paradigm, Claude 3.7 toggles between lightning replies and deep, stepwise “extended thinking”—visible to Pro subscribers. Beyond text, its vision suite parses charts, PDFs, even video stills, merging speed and introspection in one interface.
-    </p>
-    <h3>3.2 Specs &amp; Pricing</h3>
-    <p>
-      Accessible via Anthropic API, Bedrock, Vertex AI, and the Claude chatbot, it wields a 200,000-token window with extended outputs up to 64,000 tokens. At $3 input and $15 output per million tokens, it stakes a premium claim—justified by top-tier GPQA and MATH 500 scores (84.8%, 96.2% in extended mode).
-    </p>
-  </section>
+                    <section id="introduction">
+                        <h2>1. Introduction</h2>
+                        <p>
+                            In the whirlwind of AI innovation, OpenAI’s GPT-4.1 and Anthropic’s Claude 3.7 Sonnet stand as titans locked in a dance of capabilities. This narrative peels back the layers of both models, spotlighting their breakthroughs, quirks, and trade-offs. Our aim: to equip researchers, engineers, and curious minds with a lucid, high-voltage comparison that crackles with both depth and flair.
+                        </p>
+                    </section>
 
-  <section id="comparison">
-    <h2>4. Side-by-Side Showdown</h2>
-    <h3>4.1 Coding Proficiency</h3>
-    <p>
-      <strong>GPT-4.1:</strong> 54.6% on SWE-bench, champions in code reviews with 55% pull-request win rate. <strong>Claude:</strong> Sweeps with 62.3–70.3% (custom scaffold), excels at end-to-end codegen. Outcome? Task-dependent supremacy—GPT-4.1 for rapid refactors, Claude for heavyweight feature builds.
-    </p>
-    <h3>4.2 Reasoning &amp; Instruction Following</h3>
-    <p>
-      Claude’s extended thinking scores trounce at 84.8% GPQA vs GPT-4.1’s 66.3%. Yet GPT-4.1’s literalism (87.4% IFEval) demands precision in prompts, rewarding exactitude over guess-and-check.
-    </p>
-    <h3>4.3 Context &amp; Cost</h3>
-    <p>
-      Context kingship: GPT-4.1’s million-token realm vs Claude’s 200k. Cost arbitration tilts to OpenAI’s tiered pricing, mini and nano variants sub-$2 per million—contrast to Claude’s $18 combined rate.
-    </p>
-  </section>
+                    <section id="gpt41-analysis">
+                        <h2>2. OpenAI’s GPT-4.1: Unpacking the Powerhouse</h2>
+                        <h3>2.1 Key Features & Developer-Focused Gains</h3>
+                        <p>
+                            Launched on April 14, 2025, the GPT-4.1 family (standard, mini, nano) ratchets up real-world utility. Code diffs now land with sniper precision—scores on Aider’s polyglot benchmark more than double GPT-4o’s, slicing latency and cost by offloading unchanged lines. Frontend chores? Human graders pick GPT-4.1 outputs over GPT-4o’s 80% of the time, praising cleaner structure and stylish flair.
+                        </p>
+                        <p>
+                            On the SWE-bench Verified, GPT-4.1 jumps to 54.6% from GPT-4o’s 33.2%, translating to 60% better internal dev-benchmarks and 30% leaner tool orchestration, per alpha testers. Instruction fidelity climbs too: 38.3% on ScaleAI’s MultiChallenge, up 10.5 points, with robust handling of negative, ordered, and content-rich prompts hailed by legal tech pioneers.
+                        </p>
+                        <h3>2.2 Specs & Pricing</h3>
+                        <p>
+                            Context windows explode to 1,047,576 tokens—far eclipsing past caps—fueling nuanced multi-hop reasoning in legal and financial domains. Output maxes at 32,768 tokens. Pricing tiers cascade from flagship ($2 input, $8 output per million) to nano’s bargain bin ($0.10/$0.40), democratizing access for budget-savvy devs.
+                        </p>
+                    </section>
 
-  <section id="strengths-weaknesses">
-    <h2>5. Strengths, Weaknesses &amp; Sweet Spots</h2>
-    <h3>5.1 GPT-4.1</h3>
-    <ul>
-      <li><strong>Strengths:</strong> Massive context, cost-flexible tiers, slick frontend code.</li>
-      <li><strong>Weaknesses:</strong> Occasional safety quirks, prompt strictness, slight drift at extreme lengths.</li>
-      <li><strong>Ideal:</strong> Bulk document parsing, code review pipelines, video analysis tasks.</li>
-    </ul>
-    <h3>5.2 Claude 3.7 Sonnet</h3>
-    <ul>
-      <li><strong>Strengths:</strong> Top-tier coding and reasoning scores, transparent thought trails.</li>
-      <li><strong>Weaknesses:</strong> Smaller window, premium pricing, extended mode gated.</li>
-      <li><strong>Ideal:</strong> Deep research, complex multi-step problems, scenarios demanding audit-ready logic.</li>
-    </ul>
-  </section>
+                    <section id="claude-analysis">
+                        <h2>3. Anthropic’s Claude 3.7 Sonnet: The Hybrid Thinker</h2>
+                        <h3>3.1 Hybrid Reasoning & Multimodal Flair</h3>
+                        <p>
+                            Debuted February 2025 with a “hybrid reasoning” paradigm, Claude 3.7 toggles between lightning replies and deep, stepwise “extended thinking”—visible to Pro subscribers. Beyond text, its vision suite parses charts, PDFs, even video stills, merging speed and introspection in one interface.
+                        </p>
+                        <h3>3.2 Specs & Pricing</h3>
+                        <p>
+                            Accessible via Anthropic API, Bedrock, Vertex AI, and the Claude chatbot, it wields a 200,000-token window with extended outputs up to 64,000 tokens. At $3 input and $15 output per million tokens, it stakes a premium claim—justified by top-tier GPQA and MATH 500 scores (84.8%, 96.2% in extended mode).
+                        </p>
+                    </section>
 
-  <section id="conclusion">
-    <h2>6. Conclusion</h2>
-    <p>
-      Both GPT-4.1 and Claude 3.7 Sonnet rewrite the playbook on LLM prowess. Choose OpenAI for scale and cost agility; pick Anthropic for crystal-clear reasoning and benchmark dominance. In a terrain defined by nuance, the “right” model is the one that aligns your priorities—be it breadth, depth, or budget.
-    </p>
-  </section>
+                    <section id="comparison">
+                        <h2>4. Side-by-Side Showdown</h2>
+                        <h3>4.1 Coding Proficiency</h3>
+                        <p>
+                            <strong>GPT-4.1:</strong> 54.6% on SWE-bench, champions in code reviews with 55% pull-request win rate. <strong>Claude:</strong> Sweeps with 62.3–70.3% (custom scaffold), excels at end-to-end codegen. Outcome? Task-dependent supremacy—GPT-4.1 for rapid refactors, Claude for heavyweight feature builds.
+                        </p>
+                        <h3>4.2 Reasoning & Instruction Following</h3>
+                        <p>
+                            Claude’s extended thinking scores trounce at 84.8% GPQA vs GPT-4.1’s 66.3%. Yet GPT-4.1’s literalism (87.4% IFEval) demands precision in prompts, rewarding exactitude over guess-and-check.
+                        </p>
+                        <h3>4.3 Context & Cost</h3>
+                        <p>
+                            Context kingship: GPT-4.1’s million-token realm vs Claude’s 200k. Cost arbitration tilts to OpenAI’s tiered pricing, mini and nano variants sub-$2 per million—contrast to Claude’s $18 combined rate.
+                        </p>
+                    </section>
+
+                    <section id="strengths-weaknesses">
+                        <h2>5. Strengths, Weaknesses & Sweet Spots</h2>
+                        <h3>5.1 GPT-4.1</h3>
+                        <ul>
+                            <li><strong>Strengths:</strong> Massive context, cost-flexible tiers, slick frontend code.</li>
+                            <li><strong>Weaknesses:</strong> Occasional safety quirks, prompt strictness, slight drift at extreme lengths.</li>
+                            <li><strong>Ideal:</strong> Bulk document parsing, code review pipelines, video analysis tasks.</li>
+                        </ul>
+                        <h3>5.2 Claude 3.7 Sonnet</h3>
+                        <ul>
+                            <li><strong>Strengths:</strong> Top-tier coding and reasoning scores, transparent thought trails.</li>
+                            <li><strong>Weaknesses:</strong> Smaller window, premium pricing, extended mode gated.</li>
+                            <li><strong>Ideal:</strong> Deep research, complex multi-step problems, scenarios demanding audit-ready logic.</li>
+                        </ul>
+                    </section>
+
+                    <section id="conclusion">
+                        <h2>6. Conclusion</h2>
+                        <p>
+                            Both GPT-4.1 and Claude 3.7 Sonnet rewrite the playbook on LLM prowess. Choose OpenAI for scale and cost agility; pick Anthropic for crystal-clear reasoning and benchmark dominance. In a terrain defined by nuance, the “right” model is the one that aligns your priorities—be it breadth, depth, or budget.
+                        </p>
+                    </section>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts-list">
+                        <li><a href="Gemini-2.5-Pro-Preview-05-06-vs-Claude-3.7-Sonnet.html" title="Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy">Gemini 2.5 Pro vs Claude 3.7...</a></li>
+                        <li><a href="../04/guide-to-open-source-blog-engines.html" title="Blog Wars 2025: Your Ultimate Open-Source, Self-Hosted Blogging Platform Showdown">Guide to Open Source Blog Engines...</a></li>
+                        <li><a href="../../2024/06/apple-event-wwdc-2024-summary.html" title="Apple Event 2024: Revolutionizing Technology with Apple Intelligence">Apple Event 2024: Apple Intelligence...</a></li>
+                        <li><a href="../../p/composing-music-with-chatgpt.html" title="Composing Music with ChatGPT: An Inspiration or a Threat to the Musicians?">Composing Music with ChatGPT...</a></li>
+                        <li><a href="../../p/creating-snake-game-from-scratch-using.html" title="Creating a Snake Game from Scratch Using ChatGPT-4">Creating a Snake Game with ChatGPT-4</a></li>
+                        <li><a href="../../p/foreign-language-learning-contemporary.html" title="Foreign Language Learning: Contemporary Instruments and the Promises of ChatGPT">Foreign Language Learning & ChatGPT...</a></li>
+                        <li><a href="../../p/health-data-analytics-network.html" title="UK HEALTH DATA ANALYTICS NETWORK">UK Health Data Analytics Network</a></li>
+                        <li><a href="../../p/the-future-of-health-data-analytics-in.html" title="The Future of Health Data Analytics in the UK: Prospects and Roadmap">Future of Health Data Analytics UK...</a></li>
+                        <li><a href="../../p/the-state-of-health-data-science-in-uk.html" title="The State of Health Data Science in the UK: Before and After COVID">State of Health Data Science UK...</a></li>
+                        <li><a href="../../p/what-data-scientists-do.html" title="What data scientists do">What Data Scientists Do</a></li>
+                        <li><a href="../../p/free-no-code-no-registration-web-app.html" title="Free no-code no registration web app for combining scatterplots with barplots">Free Web App: Scatter/Bar Plots...</a></li>
+                        <li><a href="../../2024/06/5-best-ai-characters-websites.html" title="Top five AI-characters Websites">5 Best AI Characters Websites</a></li>
+                        <li><a href="../../2024/06/ai-therapy-perks-and-pitfalls-of.html" title="AI therapy: The Perks and Pitfalls">AI Therapy: Perks and Pitfalls</a></li>
+                        <li><a href="../../2024/05/meet-victoria-ukraines-groundbreaking.html" title="Meet Victoria: Ukraine's Groundbreaking AI Government Spokesperson">Meet Victoria: Ukraine's AI Spokesperson</a></li>
+                        <li><a href="../../2024/05/intel-boosts-performance-with-500.html" title="Intel Boosts Performance with 500 Optimized AI Models for Core Ultra Processors">Intel Boosts Performance with 500 AI Models...</a></li>
+                        <li><a href="../../2024/04/meta-llama-3-70b-best-open-source-llm.html" title="Meta Llama-3-70b">Meta Llama-3-70b: Best Open Source LLM</a></li>
+                        <li><a href="../../2024/04/music-industry-fights-back-rise-of-ai.html" title="Music Industry Fights Back: The Rise of AI">Music Industry Fights Back vs AI</a></li>
+                        <li><a href="../../2024/03/gpt-2-from-too-scary-to-excel-sheet.html" title="GPT-2: From Too Scary to Excel Sheet">GPT-2: From Too Scary to Excel Sheet</a></li>
+                        <li><a href="../../2024/03/mistral-ai-french-startup-committed-to.html" title="Mistral AI: A French Startup Committed to Open Source Principles">Mistral AI: French Startup & Open Source</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> </p>
+            <ul class="footer-links">
+                <!-- Add footer links like Privacy Policy, Terms of Service if available -->
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to display the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
