@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =======================================================================
+       NEW ARTICLE PAGE — Cloudflare Free Hosting (keeps original template's head)
+       This file mirrors the structure/classes from deep-researcher.html so your
+       existing styles.css applies without changes.
+       ======================================================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Host Your Website for Free with Cloudflare — Pages & Workers (2025 Guide)</title>
+  <meta name="description" content="Launch a fast, global website for free using Cloudflare Pages (static) and optionally Workers (serverless). Step-by-step direct-upload flow, custom domains, redeploys, and pro tips—no servers, no credit card." />
+  <meta name="keywords" content="Cloudflare Pages guide, free website hosting, Cloudflare Workers, deploy static site, attach custom domain, drag and drop hosting, serverless backend" />
+  <!-- Google Fonts (same as template) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <!-- Site Styles + Favicon (same paths/classes as template) -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- ============================== Header / Nav ============================== -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="../../index.html" class="logo">UK-HDAN</a>
+        <ul class="nav-links">
+          <!-- Optional: add site-wide links -->
+          <!-- <li><a href="../../about.html">About</a></li>
+          <li><a href="../../blog/index.html">Blog</a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================== Main ============================== -->
+  <main class="main-container">
+    <div class="content-wrapper">
+      <!-- ============================== Main Content ============================== -->
+      <div class="main-content">
+        <article>
+          <!-- ========================= HERO & TITLE (keeps template structure) ========================= -->
+          <h1>How to Host Your Website for Free with Cloudflare: Pages + Workers (2025 Guide)</h1>
+          <center>
+            <div>
+              <!-- Replace the image below with your own asset if desired -->
+              <a href="https://zerocoststartup.com/blog/how-to-host-your-website-for-free-with-cloudflare" target="_blank" rel="noopener">
+                <img src="../../media/CF_graphical_abstract.webp" alt="Diagram: Cloudflare Pages for static hosting and Workers for serverless logic" />
+              </a>
+            </div>
+          </center>
+
+          <!-- ========================= ARTICLE BODY ========================= -->
+          <h2>From paying for servers to &ldquo;free and global&rdquo;</h2>
+          <p>
+            Here&rsquo;s the part most newcomers miss: you don&rsquo;t need a traditional host to get a fast, globally available site online. Cloudflare&rsquo;s platform pairs <strong>Pages</strong> (for static files) with <strong>Workers</strong> (for optional serverless logic). That combination covers everything from a simple portfolio to a tiny app with API routes—no VPS, no Nginx, no patching.
+          </p>
+          <p>
+            The fastest path uses a direct, code-free deploy: drag-and-drop your built site into Pages and you instantly get a production URL with HTTPS on a world-scale CDN. When (or if) you need dynamic behavior—contact forms, authenticated endpoints, rate-limited API calls—you can add Workers alongside your static site.
+          </p>
+
+          <h2>Deploy in 60 seconds: the direct upload flow</h2>
+          <ol>
+            <li>Prepare a folder containing <code>index.html</code>, CSS, JS, and assets.</li>
+            <li>In Cloudflare dashboard, go to <em>Workers &amp; Pages → Create application → Pages → Use direct upload</em>.</li>
+            <li>Name your project (this also becomes your staging URL).</li>
+            <li>Drag your folder (or a .zip) into the uploader and click <em>Deploy</em>.</li>
+          </ol>
+          <p>
+            That&rsquo;s it. Cloudflare provisions TLS automatically and serves your site at
+            <code>&lt;project&gt;.pages.dev</code> from its global edge. You can share the link immediately, test on mobile, and iterate without touching a server.
+          </p>
+
+          <h2>Connect a custom domain (optional but recommended)</h2>
+          <p>
+            When you&rsquo;re ready to look polished, attach a custom domain. If your DNS already sits on Cloudflare, it&rsquo;s nearly point-and-click inside the Pages project. If it doesn&rsquo;t, you&rsquo;ll add a <code>CNAME</code> pointing to your Pages subdomain. Cloudflare issues the certificate and routes traffic for you—no Let&rsquo;s Encrypt wrangling.
+          </p>
+          <p>
+            Prefer visitors to always use your domain rather than <code>.pages.dev</code>? Add a managed redirect so the staging URL 301s to your branded host.
+          </p>
+
+          <h2>Edit, redeploy, and roll back with confidence</h2>
+          <p>
+            Change a hero image, tweak CSS, add a new page—then create a <em>new deployment</em>. Pages gives you atomic deploys, preview links for each version, and instant rollbacks. Outgrowing manual uploads? Flip to the Git-connected flow so every push builds and deploys automatically.
+          </p>
+
+          <h2>Add a backend with Workers (only if you need it)</h2>
+          <p>
+            Many sites are fine as pure static, but if you need runtime logic—form handling, data fetch with API key protection, rate limiting—drop in <strong>Workers</strong>. You can colocate a Worker in front of your Pages site to process requests, set headers, or serve JSON endpoints. Because Workers run at the edge, latency stays low worldwide.
+          </p>
+          <ul>
+            <li><em>Examples:</em> contact form that writes to a KV/D1 store, newsletter signup that calls a third-party API with a secret, tiny JSON API for your frontend.</li>
+            <li><em>Tip:</em> cache aggressively at the edge for GET routes and use short TTLs on dynamic pages.</li>
+          </ul>
+
+          <h2>Free-plan guardrails (what to know up front)</h2>
+          <p>
+            The free tier for Pages is generous for personal sites and prototypes. Direct uploads don&rsquo;t &ldquo;build&rdquo; anything, and Git-connected projects have ample monthly build allowance. Workers on the free tier cover a healthy number of requests per day; when you outgrow that, paid plans scale linearly and are inexpensive compared with traditional hosting.
+          </p>
+          <p>
+            Practical takeaway: if you&rsquo;re launching a portfolio, marketing page, docs site, or a small app with light serverless needs, you likely won&rsquo;t hit ceilings early.
+          </p>
+
+          <h2>Two pro tips so you don&rsquo;t get surprised</h2>
+          <ol>
+            <li><strong>Pages Functions require a build.</strong> If you want server-side code <em>inside</em> a Pages project (Pages Functions), deploy via the CLI (Wrangler) so the function code is compiled and bundled. Direct Upload is ideal for static files only.</li>
+            <li><strong>Workers run before the cache.</strong> Requests that go through a Worker count as Worker invocations even when content is cached. Design with caching in mind for cost and speed.</li>
+          </ol>
+
+          <h2>The five-step free path, recap</h2>
+          <ol>
+            <li><strong>Prepare</strong> your static site folder.</li>
+            <li><strong>Deploy</strong> via Pages → Direct Upload.</li>
+            <li><strong>Share</strong> the <code>.pages.dev</code> URL (HTTPS by default).</li>
+            <li><strong>Attach</strong> your custom domain and add a 301 from staging.</li>
+            <li><strong>Iterate</strong> with new deployments; add Workers only when needed.</li>
+          </ol>
+
+          <h2>Why this stack feels &ldquo;unfairly good&rdquo; for indies</h2>
+          <p>
+            You skip the old triangle of &ldquo;buy hosting, configure a server, tune performance.&rdquo; Instead you inherit a global CDN, automatic TLS, versioned deploys, and a clean path to add programmable logic later. For many personal sites, prototypes, and early-stage products, that&rsquo;s the difference between shipping today and never getting around to it.
+          </p>
+
+          <!-- ========================= (Optional) References block ========================= -->
+          <h2>References</h2>
+          <ul>
+            <li><a href="https://developers.cloudflare.com/pages/" rel="nofollow">Cloudflare Pages — Docs</a></li>
+            <li><a href="https://developers.cloudflare.com/workers/" rel="nofollow">Cloudflare Workers — Docs</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/framework-guides/" rel="nofollow">Framework Guides for Pages</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/platform/functions/" rel="nofollow">Pages Functions</a></li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- ============================== Sidebar (kept compatible with template) ============================== -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3>Recent Posts</h3>
+          <ul class="recent-posts-list">
+            <!-- You can update these to your actual recent posts -->
+            <li><a href="how-to-host-your-website-for-free-with-cloudflare.html" title="How to Host Your Website for Free with Cloudflare: Pages + Workers (2025 Guide)">Host Your Website for Free (Cloudflare)</a></li>
+            <li><a href="../08/Gemini-2.5-Pro-Preview-05-06-vs-Claude-3.7-Sonnet.html" title="Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy">Gemini 2.5 Pro vs. Claude 3.7 Sonnet...</a></li>
+            <li><a href="../08/openai-gpt-4-1-vs-anthropic-claude-3-7-sonnet.html" title="OpenAI GPT-4.1 vs Anthropic Claude 3.7 Sonnet: A Tech Journalist’s Deep Dive">OpenAI GPT-4.1 vs Anthropic Claude 3.7...</a></li>
+            <li><a href="../04/guide-to-open-source-blog-engines.html" title="Blog Wars 2025: Your Ultimate Open-Source, Self-Hosted Blogging Platform Showdown">Guide to Open-Source Blog Engines...</a></li>
+            <li><a href="../../2024/06/apple-event-wwdc-2024-summary.html" title="Apple Event 2024: Revolutionizing Technology with Apple Intelligence">Apple Event 2024: Apple Intelligence...</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; <span id="current-year"></span></p>
+      <ul class="footer-links">
+        <!-- Add footer links like Privacy/Terms if available -->
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ============================== Scripts ============================== -->
+  <script>
+    // Keep template's behavior: inject current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =======================================================================
+       NEW ARTICLE PAGE — Full-Stack on the Edge (keeps template's head assets)
+       Mirrors deep-researcher.html structure so styles.css applies unchanged.
+       ======================================================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build &amp; Host a Full-Stack App on the Edge — Free with Cloudflare (2025 Guide)</title>
+  <meta name="description" content="Ship a real full-stack app for $0 using Cloudflare Pages for the UI and Workers for the API. JWT protection, streaming LLM responses (Groq), rate limiting with Durable Objects or D1, and production-minded tips." />
+  <meta name="keywords" content="Cloudflare Workers, Cloudflare Pages, Pages Functions, Durable Objects, D1 database, free hosting, edge runtime, JWT, Groq API, streaming responses, serverless full-stack" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- ============================== Header / Nav ============================== -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="../../index.html" class="logo">UK-HDAN</a>
+        <ul class="nav-links">
+          <!-- <li><a href="../../about.html">About</a></li>
+          <li><a href="../../blog/index.html">Blog</a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================== Main ============================== -->
+  <main class="main-container">
+    <div class="content-wrapper">
+      <!-- ============================== Main Content ============================== -->
+      <div class="main-content">
+        <article>
+          <!-- ========================= HERO & TITLE ========================= -->
+          <h1>How to Build &amp; Host a Full-Stack App on the Edge for Free (Cloudflare Pages + Workers)</h1>
+          <center>
+            <div>
+              <a href="https://zerocoststartup.com/blog/how-to-build-and-host-a-full-stack-app-on-the-edge-for-free" target="_blank" rel="noopener">
+                <img src="../../media/CF_fullstack_edge_abstract.webp" alt="Graphical abstract: Pages for UI, Workers for API, Groq streaming, and a global CDN edge" />
+              </a>
+            </div>
+          </center>
+
+          <!-- ========================= ARTICLE BODY ========================= -->
+          <h2>Myth: free hosting is only for static sites</h2>
+          <p>
+            The old rule of thumb—&ldquo;free&rdquo; means static only—doesn&rsquo;t hold anymore. With Cloudflare, you can run a fully capable app at the edge: <strong>Pages</strong> serves your UI from a global CDN, while <strong>Workers</strong> runs your backend logic close to users. Secrets live on the serverless edge, not in the browser bundle, and you still deploy in minutes.
+          </p>
+
+          <h2>Architecture in one sentence</h2>
+          <p>
+            <em>Static-first UI on Pages; API on a Worker;</em> optional <em>Pages Functions</em> for server-side routes baked into a Pages project, plus state via <em>Durable Objects</em> or <em>D1</em> when you need it. Pages gives you instant HTTPS and versioned deploys, while Workers enforces auth, rate limits, and outbound calls.
+          </p>
+
+          <h2>The zero-cost blueprint</h2>
+          <ol>
+            <li><strong>Ship the UI on Pages.</strong> Upload prebuilt assets with Direct Upload or connect a Git repo for CI. You get a <code>&lt;project&gt;.pages.dev</code> URL with automatic TLS and rollbacks. <a href="https://developers.cloudflare.com/pages/" rel="nofollow">Docs</a></li>
+            <li><strong>Add a Worker for your API.</strong> Create a Worker and expose routes like <code>/chat</code> or <code>/api/*</code>. Bind environment variables for secrets (e.g., <code>GROQ_API_KEY</code>, <code>JWT_SECRET</code>) and verify a short-lived JWT on every call. <a href="https://developers.cloudflare.com/workers/platform/limits/" rel="nofollow">Limits</a></li>
+            <li><strong>Stream model outputs via Groq.</strong> Call Groq&rsquo;s OpenAI-compatible endpoint and stream tokens to the browser; the UI renders partial output for a real-time feel. <a href="https://console.groq.com/docs/openai" rel="nofollow">OpenAI-compat</a> · <a href="https://console.groq.com/docs/text-chat" rel="nofollow">Streaming</a> · <a href="https://console.groq.com/docs/model/llama-3.3-70b-versatile" rel="nofollow">Llama-3.3-70B</a></li>
+            <li><strong>Gate usage.</strong> Start simple (per-visitor caps in <code>localStorage</code>), then move to server-side limits with <em>Durable Objects</em> or D1 for persistent quotas. <a href="https://developers.cloudflare.com/durable-objects/examples/build-a-rate-limiter/" rel="nofollow">DO rate-limiter example</a> · <a href="https://developers.cloudflare.com/d1/platform/limits/" rel="nofollow">D1 limits</a></li>
+            <li><strong>Attach your domain.</strong> Add a custom domain to your Pages project and 301 the staging host to your brand. <a href="https://developers.cloudflare.com/pages/get-started/direct-upload/" rel="nofollow">Direct Upload</a></li>
+          </ol>
+
+          <h2>Security &amp; ergonomics</h2>
+          <ul>
+            <li><strong>JWTs, not raw keys.</strong> Issue short-lived tokens server-side and validate on every Worker request. Scope CORS so only your Pages origin can call your API.</li>
+            <li><strong>Secrets stay at the edge.</strong> Store provider keys as Worker environment variables; never ship them to the client; rotate as needed.</li>
+            <li><strong>Cache where it counts.</strong> Remember that Workers execute <em>before</em> cache; send only dynamic calls through the Worker and cache GETs aggressively to reduce invocations.</li>
+          </ul>
+
+          <h2>Pages Functions vs. a standalone Worker</h2>
+          <p>
+            Pages Functions are great when your routes live alongside the UI, but dashboard drag-and-drop does not compile a <code>functions/</code> folder. Use <strong>Wrangler</strong> to deploy Functions, or stick to a separate Worker if you prefer a clean UI/API split.
+          </p>
+
+          <h2>Free-plan realities</h2>
+          <p>
+            On the <strong>Workers Free</strong> plan, you get up to <em>100,000 requests per day</em> per account, resetting at midnight UTC. Pages gives generous deploy and bandwidth characteristics for small sites. D1 and DOs include practical free limits for metering and basic state—upgrade when you outgrow them.
+          </p>
+
+          <h2>Step-by-step: minimal chat app</h2>
+          <ol>
+            <li><strong>Frontend</strong> (Pages): a simple HTML/CSS/JS chat UI that connects to <code>/chat</code> and renders streamed text.</li>
+            <li><strong>Backend</strong> (Worker): validates a JWT, calls Groq’s <code>/openai/v1/chat/completions</code> endpoint, and forwards the event stream to the client.</li>
+            <li><strong>Guardrails</strong>: per-IP/session limiter (DO or D1), and short cache TTLs for read endpoints.</li>
+          </ol>
+
+          <h2>Why this pattern feels &ldquo;unfairly good&rdquo;</h2>
+          <p>
+            You get a premium user experience with tiny infrastructure: a static UI that never waits on origin, a Worker that wakes for the hard parts, and a clear on-ramp from free to paid when usage justifies it. Most importantly, you keep velocity—deploy fast, iterate faster, and scale cleanly.
+          </p>
+
+          <!-- ========================= References ========================= -->
+          <h2>References</h2>
+          <ul>
+            <li><a href="https://zerocoststartup.com/blog/how-to-build-and-host-a-full-stack-app-on-the-edge-for-free" target="_blank" rel="noopener">Original guide: Build &amp; Host a Full-Stack App on the Edge for Free</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/" rel="nofollow">Cloudflare Pages — Overview</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/get-started/direct-upload/" rel="nofollow">Pages — Direct Upload</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/functions/" rel="nofollow">Pages Functions — Docs</a></li>
+            <li><a href="https://developers.cloudflare.com/pages/functions/get-started/" rel="nofollow">Pages Functions — Get Started (Wrangler deploy)</a></li>
+            <li><a href="https://developers.cloudflare.com/workers/platform/limits/" rel="nofollow">Workers — Limits (Free plan daily request limit)</a></li>
+            <li><a href="https://developers.cloudflare.com/workers/wrangler/commands/" rel="nofollow">Wrangler — Commands</a></li>
+            <li><a href="https://developers.cloudflare.com/durable-objects/examples/build-a-rate-limiter/" rel="nofollow">Durable Objects — Build a Rate Limiter</a></li>
+            <li><a href="https://developers.cloudflare.com/d1/platform/limits/" rel="nofollow">Cloudflare D1 — Limits</a></li>
+            <li><a href="https://console.groq.com/docs/openai" rel="nofollow">Groq — OpenAI Compatibility</a></li>
+            <li><a href="https://console.groq.com/docs/text-chat" rel="nofollow">Groq — Text &amp; Chat (Streaming)</a></li>
+            <li><a href="https://console.groq.com/docs/model/llama-3.3-70b-versatile" rel="nofollow">Groq — Llama-3.3-70B Versatile (128k)</a></li>
+            <li><a href="https://console.groq.com/docs/rate-limits" rel="nofollow">Groq — Rate Limits</a></li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- ============================== Sidebar ============================== -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3>Recent Posts</h3>
+          <ul class="recent-posts-list">
+            <li><a href="how-to-build-and-host-a-full-stack-app-on-the-edge-for-free.html" title="How to Build &amp; Host a Full-Stack App on the Edge for Free (Cloudflare Pages + Workers)">Full-Stack on the Edge (Free)</a></li>
+            <li><a href="how-to-host-your-website-for-free-with-cloudflare.html" title="How to Host Your Website for Free with Cloudflare: Pages + Workers (2025 Guide)">Host Your Website for Free (Cloudflare)</a></li>
+            <li><a href="Gemini-2.5-Pro-Preview-05-06-vs-Claude-3.7-Sonnet.html" title="Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy">Gemini 2.5 Pro vs. Claude 3.7 Sonnet...</a></li>
+            <li><a href="../04/guide-to-open-source-blog-engines.html" title="Blog Wars 2025: Your Ultimate Open-Source, Self-Hosted Blogging Platform Showdown">Guide to Open-Source Blog Engines...</a></li>
+            <li><a href="../../2024/06/apple-event-wwdc-2024-summary.html" title="Apple Event 2024: Revolutionizing Technology with Apple Intelligence">Apple Event 2024: Apple Intelligence...</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; <span id="current-year"></span></p>
+      <ul class="footer-links"></ul>
+    </div>
+  </footer>
+
+  <!-- ============================== Scripts ============================== -->
+  <script>
+    // Keep template's behavior: inject current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
