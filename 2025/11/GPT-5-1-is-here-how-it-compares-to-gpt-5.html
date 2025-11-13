@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT-5.1 is here: how it compares to GPT-5</title>
+    <meta name="description" content="A deep dive into GPT-5.1, comparing it to GPT-5 and exploring its new features like adaptive reasoning, improved coding, and fine-grained tone control." />
+    <meta name="keywords" content="GPT-5.1, GPT-5, ChatGPT, AI, Large Language Models, Adaptive Reasoning, OpenAI, AI Coding, AI Math, AI Personalities" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">UK-HDAN</a>
+                <ul class="nav-links">
+                    <!-- Add other primary navigation links here if needed -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Content Wrapper for Main Content and Sidebar -->
+        <div class="content-wrapper">
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <article>
+                    <h1>GPT-5.1 is here: how it compares to GPT-5</h1>
+                    <p>Try GPT-5.1 here: <a href="https://gpt-5-1.gptchatly.com" rel="dofollow">GPT-5.1 Official Page</a> and <a href="https://gptchatly.com/gpt-5-1.html" rel="dofollow">GPTChatly's GPT-5.1 Comparison</a>.</p>
+                    <p><em>As of November 13, 2025, GPT-5.1 is rolling out inside ChatGPT for paying users and gradually for free accounts. API access via the `gpt-5.1-chat-latest` (Instant) and `gpt-5.1` (Thinking) endpoints is slated for this week, but many developers still won’t see it in their dashboards yet. The context window clocks in at 128K tokens for GPT-5.1 Instant and 196K for GPT-5.1 Thinking on supported paid plans.</em></p>
+
+                    <hr>
+
+                    <h2>A Soft Reboot After GPT-5’s Awkward Debut</h2>
+                    <p>GPT-5.1 isn’t a new generation; it’s a do-over. GPT-5 launched in August with great expectations and a weird hangover: some power users felt it was colder than GPT-4o and occasionally less reliable on math and code, prompting a surprising wave of “can I get 4o back?” nostalgia.</p>
+                    <p>OpenAI’s answer is GPT-5.1: two refreshed variants, <strong>Instant</strong> and <strong>Thinking</strong>, wrapped in a new “GPT-5.1 Auto” router that decides which one to run per request. The public story is clear: make ChatGPT <em>smarter</em>, but also make it feel less like a committee of lawyers and more like a human being you actually want to talk to.</p>
+                    <p>On paper, GPT-5.1 is still GPT-5’s architecture, data and safety stack. In practice, the 5.1 tag hides a lot of engineering: adaptive reasoning, better instruction-following, expanded tone controls, and a routing layer that tries to spend compute where it matters instead of spraying FLOPs at every prompt.</p>
+
+                    <hr>
+
+                    <h2>Adaptive Reasoning: A Thinking Budget, Not a Fixed Timer</h2>
+                    <p>The headline change is <strong>adaptive reasoning</strong>. GPT-5.1 doesn’t think for a fixed amount of time anymore; it dynamically decides how much “inner monologue” to allocate before answering. Ask it to name three dog breeds and it fires back almost instantly. Hand it a messy algorithm design problem or an AIME-style math puzzle and it quietly spins up extra reasoning steps before committing to an answer.</p>
+                    <p>OpenAI says this shows up clearly on hard benchmarks like <strong>AIME 2025</strong> and <strong>Codeforces</strong> problem sets, where GPT-5.1 scores noticeably higher than GPT-5 without becoming glacial. Independent write-ups echo that story: reviewers describe fewer “off-by-one” style math blunders and more coherent chains of reasoning on competition-style tasks, particularly when using the Thinking mode.</p>
+                    <p>Under the hood, GPT-5.1 Thinking exposes gradations of effort — “Light”, “Standard”, “Extended”, “Heavy” — giving power users an actual dial instead of a mystery box. Most people stick to Standard; agent frameworks and researchers are already cranking it up for difficult proofs, data analysis, and long-horizon planning where extra seconds pay off.</p>
+                    <p>The net effect is surprisingly human: GPT-5.1 behaves like someone who answers small talk instantly but pauses and thinks when you throw them a PhD qualifier question, instead of blurting out the first plausible-sounding thing.</p>
+
+                    <hr>
+
+                    <h2>Coding and Math: Less Vibes, More Results</h2>
+                    <p>If GPT-5 sometimes felt like it was “vibe-coding” its way through problems, GPT-5.1 is closer to a meticulous senior dev. Early testers hammering it with LeetCode-plus-Codeforces style suites report:</p>
+                    <ul>
+                        <li>Fewer silent logic errors in otherwise clean-looking code</li>
+                        <li>Better handling of edge cases and tricky input distributions</li>
+                        <li>More willingness to refactor and optimize, not just patch a bug in place</li>
+                    </ul>
+                    <p>Multiple independent blogs and newsletters describe GPT-5.1 as a <em>return to form</em> compared with GPT-5 for programming help, especially in long sessions where earlier models would drift or forget constraints halfway through a refactor. Researchers probing it with research-level math problems report crisper step-by-step derivations and fewer “hand-wavy” leaps over the hard bits, particularly in the Thinking mode.</p>
+                    <p>Is it now unambiguously top of the heap? Not quite; some showdown posts still see Anthropic’s and Google’s latest models edging ahead on certain long-horizon reasoning tests, and open-source challengers continue to nibble at the low-latency coding niche. But where GPT-5 occasionally left power users longing for GPT-4-era reliability, GPT-5.1 largely plugs those gaps — and does so without turning everyday chats into a slog.</p>
+
+                    <hr>
+
+                    <h2>From Chatbot to Presence: Eight Personalities and Fine-Grained Tone</h2>
+                    <p>The other half of the upgrade is emotional, not mathematical. GPT-5.1 simply <strong>sounds different</strong>.</p>
+                    <p>GPT-5 had a tendency to come off clipped, cautious and a little distant. GPT-5.1 Instant, by contrast, starts from a warmer baseline: slightly more playful wording, a bit more empathy, less pseudo-corporate stiffness. Ask it about burnout and it’s more likely to respond with something like “You’re not alone in feeling this — let’s unpack what’s going on,” instead of dropping a sterile bullet list of coping techniques.</p>
+                    <p>This isn’t just vague “tone tuning.” ChatGPT now ships with <strong>eight</strong> built-in personality presets — Default, Professional, Friendly, Candid, Quirky, Efficient, Nerdy, and Cynical — replacing the earlier, simpler style toggles. You pick the vibe; the underlying IQ stays the same. Want a polished corporate assistant? Flip to Professional. Prefer a nerdy explainer that happily dives into side-quests and references papers? Nerdy it is.</p>
+                    <p>On top of those presets, OpenAI is quietly testing sliders for how <strong>warm</strong>, <strong>concise</strong>, or <strong>emoji-heavy</strong> you want replies to be, alongside better adherence to custom instructions. The goal is obvious: reduce the amount of prompt-engineering gymnastics needed to get the model to “sound right,” whether you’re building a customer-support bot or a tutoring companion.</p>
+
+                    <hr>
+
+                    <h2>GPT-5.1 Auto: One Button, Two Brains</h2>
+                    <p>Underneath the ChatGPT UI, GPT-5.1 really comes as a trio:</p>
+                    <ul>
+                        <li><strong>GPT-5.1 Instant</strong> – fast, chatty default with light adaptive reasoning.</li>
+                        <li><strong>GPT-5.1 Thinking</strong> – deeper, more expensive reasoning for hard tasks.</li>
+                        <li><strong>GPT-5.1 Auto</strong> – a router that decides which of the two should answer.</li>
+                    </ul>
+                    <p>Select GPT-5.1 in ChatGPT and you’re effectively talking to Auto. It watches your prompts, past turns and historical patterns of what users pick manually, then chooses Instant or Thinking for you. When it does spin up the reasoning mode, you get a slimmed-down preview of its thought process and a “Answer now” button if you’d rather trade quality for speed.</p>
+                    <p>For heavy users, the context story is straightforward but important:</p>
+                    <ul>
+                        <li>GPT-5.1 Instant: up to 128K tokens</li>
+                        <li>GPT-5.1 Thinking: up to 196K tokens</li>
+                    </ul>
+                    <p>Both are a step up from the early GPT-4 era, but still shy of the <strong>256K context</strong> many testers observed on the mysterious Polaris Alpha model that appeared on OpenRouter shortly before this launch.</p>
+
+                    <hr>
+
+                    <h2>API Story: `gpt-5.1-chat-latest`, `gpt-5.1` and What’s Next</h2>
+                    <p>For now, GPT-5.1 is a <strong>ChatGPT-first</strong> release. Paid users on Plus, Pro, Go, Business, Enterprise and Edu plans are getting it first, with free and logged-out users following as rollout stabilizes. Free tier accounts get a metered number of GPT-5.1 messages before falling back to a lighter model.</p>
+                    <p>OpenAI says both variants are coming to the API “later this week” as:</p>
+                    <ul>
+                        <li>`gpt-5.1-chat-latest` – the Instant model</li>
+                        <li>`gpt-5.1` – the Thinking model, with adaptive reasoning enabled</li>
+                    </ul>
+                    <p>Those model IDs now show up in documentation and early ecosystem guides, but availability is still in the middle of a staggered rollout — some developers can already hit them; others just see the names in docs and marketing. If you’re migrating from GPT-5, the intent is mostly drop-in replacement: same generation, better behavior, with GPT-5 remaining under a Legacy dropdown for roughly three months.</p>
+                    <p>From a builder’s perspective, the big win isn’t a new maximum context or a radically different API; it’s the combination of:</p>
+                    <ul>
+                        <li>Adaptive reasoning that cuts “hallucinated” answers on hard tasks</li>
+                        <li>Stronger instruction-following, especially with constrained formats</li>
+                        <li>Personality control that can be wired directly into app settings or user profiles</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>Polaris Alpha: The Shadow That Arrived First</h2>
+                    <p>Weeks before the official GPT-5.1 blog post, a stealth model called <strong>Polaris Alpha</strong> quietly appeared on OpenRouter with a 256K context window and startlingly strong reasoning benchmarks. It behaved suspiciously like an upgraded GPT-5: similar style, noticeably better performance, very high rate limits. Cue the speculation.</p>
+                    <p>Independent analysts, Medium posts and podcasts quickly converged on the same theory: Polaris Alpha was GPT-5.1 Thinking in disguise, used to soak up real-world traffic before the public announcement. The pattern would fit OpenAI’s earlier codenames (Horizon Alpha/Beta preceding GPT-5) and matches anecdotal benchmark traces that put Polaris squarely between GPT-5 and the new 5.1 release. OpenAI, predictably, isn’t confirming any of this — but the timeline is hard to ignore.</p>
+                    <p>If that narrative is right, you’ve already seen GPT-5.1 in the wild: it just shipped under someone else’s starry codename first.</p>
+
+                    <hr>
+
+                    <h2>Tools, Agents and “Software Inside the Conversation”</h2>
+                    <p>GPT-5.1 doesn’t land in a vacuum. It arrives alongside OpenAI’s push to turn ChatGPT into a full <strong>agentic workspace</strong>: Apps SDK, AgentKit, function calling, browser tools, Python sandboxes — all the scaffolding needed for “software that lives in the chat box.”</p>
+                    <p>The new models are tuned to lean into that world. They’re better at deciding <em>when</em> to call tools, more robust when juggling multi-step workflows (e.g., run code → inspect output → patch → re-run), and less likely to hallucinate external facts instead of just asking the browser. Practically, that means fewer broken chains when you ask an assistant to:</p>
+                    <ul>
+                        <li>Debug a failing test suite end-to-end</li>
+                        <li>Pull live pricing, then build a comparison table</li>
+                        <li>Run basic data analysis in a notebook-style loop</li>
+                    </ul>
+                    <p>Agent builders are already reporting smoother runs and fewer “forgot to call the tool” failures compared to early GPT-5 setups.</p>
+
+                    <hr>
+
+                    <h2>Safety, Tone and the Tightrope Walk</h2>
+                    <p>There is a catch. GPT-5.1’s system card addendum quietly notes some <strong>small regressions in specific safety evaluations</strong>, particularly around sensitive topics like violence and mental health when using the deeper reasoning mode. Outside reviewers have also noticed that 5.1 can feel marginally more blunt or “unfiltered” in certain edge cases — a side-effect, perhaps, of dialing back the over-cautious guardrails that frustrated many GPT-5 users.</p>
+                    <p>OpenAI’s pitch is that this is a conscious trade-off: models that are less annoying and more candid, while still staying within their overall safety envelope. The company says it is iterating on mitigations without rolling back the warmth and directness people clearly prefer. For the vast majority of everyday usage — coding, math, writing, research — GPT-5.1 simply feels more capable and less constrained than GPT-5, without obviously veering into unsafe territory.</p>
+
+                    <hr>
+
+                    <h2>The Competitive Backdrop: Claude, Gemini, Grok & the Rest</h2>
+                    <p>If GPT-4 defined an era where OpenAI felt comfortably ahead, GPT-5.1 lands in a very different landscape. Anthropic’s Claude 4/4.5 family, Google’s upcoming Gemini 3, xAI’s Grok and a growing wave of Chinese and open-source models are all pushing hard on reasoning, coding and long-context use cases.</p>
+                    <p>Notably, OpenAI has <em>not</em> published a big flashy benchmark table this time. Instead, the message from both official materials and independent coverage is pragmatic: GPT-5.1 is an <em>iterative</em> but meaningful improvement designed to fix GPT-5’s missteps, tighten the perceived gap with Claude and Gemini in coding and math, and keep ChatGPT in pole position as the assistant people actually reach for every day.</p>
+                    <p>In other words, GPT-5.1 isn’t trying to “win the internet” with a single knockout chart. It’s trying to make sure you don’t feel tempted to switch tabs.</p>
+
+                    <hr>
+
+                    <h2>Verdict: Not a New Era, But a Much Better Everyday Companion</h2>
+                    <p>GPT-5.1 delivers what GPT-5 promised but only partially delivered:</p>
+                    <ul>
+                        <li><strong>Smarter reasoning</strong> that scales up effort on hard tasks instead of guessing confidently.</li>
+                        <li><strong>More dependable coding and math</strong>, especially in the Thinking mode.</li>
+                        <li><strong>A warmer, more steerable personality</strong>, backed by eight presets and finer tone controls.</li>
+                        <li><strong>A cleaner developer story</strong>, with clear model IDs, adaptive reasoning and better instruction-following for structured outputs.</li>
+                    </ul>
+                    <p>It’s not a paradigm shift, and OpenAI isn’t pretending it is. GPT-5.1 is a carefully targeted refinement of the GPT-5 generation that restores confidence for power users while making the default ChatGPT experience feel more human and less brittle. For anyone who lives in code, math, long research chats or agentic workflows, that’s exactly the kind of upgrade that matters.</p>
+                    <p>The AI race will move on - Gemini 3, future Claude releases and whatever comes after Polaris are already looming. But right now, GPT-5.1 redraws the line for what a general-purpose assistant should feel like: a system that can reason hard, follow instructions, adapt its tone to you, and still answer in a fraction of a second when all you wanted was the name of that actor from that movie you half-remember.</p>
+                    <p>For the first time since GPT-5 launched, it feels like the flagship model and the flagship experience are finally in sync.</p>
+
+                    <p>For more information, visit <a href="https://gpt-5-1.gptchatly.com" rel="dofollow">GPT-5.1 Official Page</a> and <a href="https://gptchatly.com/gpt-5-1.html" rel="dofollow">GPTChatly's GPT-5.1 Comparison</a>.</p>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts-list">
+                        <!-- New post will be added here by the agent -->
+                        <li><a href="../08/deep-researcher.html" title="Deep internet research systems">Deep researchers agents...</a></li>
+                        <li><a href="../09/web-search-api-providers.html" title="Web Search API Providers">Web Search API...</a></li>
+                        <li><a href="../05/Gemini-2.5-Pro-Preview-05-06-vs-Claude-3.7-Sonnet.html" title="Gemini 2.5 Pro Preview (05-06) vs. Claude 3.7 Sonnet: A Benchmark Battle for AI Coding Supremacy">Gemini 2.5 Pro vs. Claude 3.7 Sonnet...</a></li>
+                        <li><a href="../05/openai-gpt-4-1-vs-anthropic-claude-3-7-sonnet.html" title="OpenAI GPT-4.1 vs Anthropic Claude 3.7 Sonnet: A Tech Journalist’s Deep Dive">OpenAI GPT-4.1 vs Anthropic Claude 3.7...</a></li>
+                        <li><a href="../04/guide-to-open-source-blog-engines.html" title="Blog Wars 2025: Your Ultimate Open-Source, Self-Hosted Blogging Platform Showdown">Guide to Open Source Blog Engines...</a></li>
+                        <li><a href="../../2024/06/apple-event-wwdc-2024-summary.html" title="Apple Event 2024: Revolutionizing Technology with Apple Intelligence">Apple Event 2024: Apple Intelligence...</a></li>
+                        <li><a href="../../p/composing-music-with-chatgpt.html" title="Composing Music with ChatGPT: An Inspiration or a Threat to the Musicians?">Composing Music with ChatGPT...</a></li>
+                        <li><a href="../../p/creating-snake-game-from-scratch-using.html" title="Creating a Snake Game from Scratch Using ChatGPT-4">Creating a Snake Game with ChatGPT-4</a></li>
+                        <li><a href="../../p/foreign-language-learning-contemporary.html" title="Foreign Language Learning: Contemporary Instruments and the Promises of ChatGPT">Foreign Language Learning & ChatGPT...</a></li>
+                        <li><a href="../../p/health-data-analytics-network.html" title="UK HEALTH DATA ANALYTICS NETWORK">UK Health Data Analytics Network</a></li>
+                        <li><a href="../../p/the-future-of-health-data-analytics-in.html" title="The Future of Health Data Analytics in the UK: Prospects and Roadmap">Future of Health Data Analytics UK...</a></li>
+                        <li><a href="../../p/the-state-of-health-data-science-in-uk.html" title="The State of Health Data Science in the UK: Before and After COVID">State of Health Data Science UK...</a></li>
+                        <li><a href="../../p/what-data-scientists-do.html" title="What data scientists do">What Data Scientists Do</a></li>
+                        <li><a href="../../p/free-no-code-no-registration-web-app.html" title="Free no-code no registration web app for combining scatterplots with barplots">Free Web App: Scatter/Bar Plots...</a></li>
+                        <li><a href="../../2024/06/5-best-ai-characters-websites.html" title="Top five AI-characters Websites">5 Best AI Characters Websites</a></li>
+                        <li><a href="../../2024/06/ai-therapy-perks-and-pitfalls-of.html" title="AI therapy: The Perks and Pitfalls">AI Therapy: Perks and Pitfalls</a></li>
+                        <li><a href="../../2024/05/meet-victoria-ukraines-groundbreaking.html" title="Meet Victoria: Ukraine's Groundbreaking AI Government Spokesperson">Meet Victoria: Ukraine's AI Spokesperson</a></li>
+                        <li><a href="../../2024/05/intel-boosts-performance-with-500.html" title="Intel Boosts Performance with 500 Optimized AI Models for Core Ultra Processors">Intel Boosts Performance with 500 AI Models...</a></li>
+                        <li><a href="../../2024/04/meta-llama-3-70b-best-open-source-llm.html" title="Meta Llama-3-70b">Meta Llama-3-70b: Best Open Source LLM</a></li>
+                        <li><a href="../../2024/04/music-industry-fights-back-rise-of-ai.html" title="Music Industry Fights Back: The Rise of AI">Music Industry Fights Back vs AI</a></li>
+                        <li><a href="../../2024/03/gpt-2-from-too-scary-to-excel-sheet.html" title="GPT-2: From Too Scary to Excel Sheet">GPT-2: From Too Scary to Excel Sheet</a></li>
+                        <li><a href="../../2024/03/mistral-ai-french-startup-committed-to.html" title="Mistral AI: A French Startup Committed to Open Source Principles">Mistral AI: French Startup & Open Source</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> </p>
+            <ul class="footer-links">
+                <!-- Add footer links like Privacy Policy, Terms of Service if available -->
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to display the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
